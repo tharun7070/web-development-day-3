@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>College Codes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label, input, button {
+      display: block;
+      margin: 10px 0;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>College Code</h1>
+  <label for="clg">Enter number (0-5):</label>
+  <input type="number" id="clg" min="0" max="5" />
+  <button onclick="calculateGrade()">Get College</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateGrade() {
+      const clg = Number(document.getElementById('clg').value);
+      let grade = '';
+      if (clg==0) {
+        grade = 'Please enter a valid marks between 0 and 100.';
+      } else if (clg == 1) {
+        grade = 'MSRIT';
+      } else if (clg == 2) {
+        grade = 'PESU';
+      } else if (clg == 3) {
+        grade = 'RVCE';
+      } else if (clg == 4) {
+        grade = 'BMSCE';
+      } else if (clg == 5) {
+        grade = 'DSCE';
+      } else {
+        grade = 'NO college alloted';
+      }
+      document.getElementById('result').textContent = 'Your college: ' + grade;
+    }
+  </script>
+</body>
+</html>
