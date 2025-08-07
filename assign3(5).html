@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <Title>Greet</Title>
+  </head>
+  <body>
+    <h1>Enter your name:</h1>
+    <input type="text" id="name">
+    <button onclick="greet()">Greet Me</button>
+
+    <p id="result"></p>
+
+    <script>
+        function greet(){
+            var name = document.getElementById("name").value;
+        
+            document.getElementById("result").innerText="Hello," +name+ "! Nice to meet you";
+        }
+        
+        
+    </script></body>

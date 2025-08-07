@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>Check if Adult</title>
+</head>
+
+<body>
+<h1>Check if Adult</h1>
+    <h2>Enter your age</h2>
+    <input type="number" id="age" min="1" max="100"/>
+    <button onclick="checkAdult()">Check</button>
+    <p id = "result"></p>
+    <script>
+        function checkAdult()
+        {
+            const age = Number(document.getElementById('age').value);
+      let ag = '';
+      if (age>0 || age<18) {
+        ag = 'You are not an adult';
+      } else if (age >= 18) {
+        ag = 'You are an adult';
+      } else if (age<=0 || age>100) {
+        ag = 'Invalid age';
+        }
+        document.getElementById('result').textContent ='Result ' +ag;
+    }
+    </script>
+</body>
+</html>
