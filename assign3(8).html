@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Details</title>
+</head>
+<body>
+    <h1>Person Details</h1>
+    <div id="person-details"></div>
+
+    <script>
+        let person = {
+            name: "John Doe",
+            age: 30,
+            city: "New York"
+        };
+        let personDetailsDiv = document.getElementById("person-details");
+
+        for (let property in person) {
+            let propertyElement = document.createElement("p");
+            propertyElement.textContent = `${property}: ${person[property]}`;
+            personDetailsDiv.appendChild(propertyElement);
+        }
+    </script>
+</body>
+</html>
+

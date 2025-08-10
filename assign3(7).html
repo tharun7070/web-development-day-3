@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favourite Colours</title>
+</head>
+<body>
+    <h1>Favourite Colours</h1>
+    <div id="colours"></div>
+
+    <script>
+        let favouriteColours = ["Blue", "Red", "Green", "Purple", "Yellow"];
+        let coloursDiv = document.getElementById("colours");
+
+        favouriteColours.forEach(colour => {
+            let colourElement = document.createElement("p");
+            colourElement.textContent = colour;
+            coloursDiv.appendChild(colourElement);
+        });
+    </script>
+</body>
+</html>
